@@ -25,6 +25,12 @@ jobs:
       run: |
         python ci/process_files.py
         
+    # Diagnostic step to confirm working directory and files
+    - name: Show Current Directory and Files
+      run: |
+        pwd
+        ls -la
+
     # Build the book
     - name: Build the book
       run: |
