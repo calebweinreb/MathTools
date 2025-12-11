@@ -9,11 +9,11 @@ jobs:
   deploy-book:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     # Install dependencies
     - name: Set up Python 3.12
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v5
       with:
         python-version: 3.12.12
 
@@ -24,12 +24,6 @@ jobs:
     - name: Process files
       run: |
         python ci/process_files.py
-        
-    # Diagnostic step to confirm working directory and files
-    - name: Show Current Directory and Files
-      run: |
-        pwd
-        ls -la
 
     # Build the book
     - name: Build the book
