@@ -3,7 +3,7 @@ name: publish-book
 # Only run this when the jupyterbook branch changes
 on:
 
-#   workflow_dispatch:
+  workflow_dispatch:
   push:
     branches:
     - jupyterbook
